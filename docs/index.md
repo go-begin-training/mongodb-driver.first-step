@@ -1,37 +1,39 @@
+# DATABASE SERVER - TO MONGODB-DRIVER FRAMEWORK #
+
+# (first step - get acquainted with MongoDB") #
+database with mongodb-driver framework (level 1)
+
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/go-begin-training/mongodb-driver.first-step/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+### How can this project run? ###
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+We use the files "go.mod" and "go.sum" to contain the necessary configuration packages.
+If the project you pull requires importing packages, open a terminal at the project root directory and enter the following command:
+```
+  $ go mod download
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Next, run directly with the command:
+```
+  $ go run * .go
+```
+Or build into a program with the command:
+```
+  $ CGO_ENABLE=0 go build --ldflags "-extldflags \"-static\"-s -w" -o bin/application -trimpath ./*.go
+```
 
-### Jekyll Themes
+The program after being built will be saved in `-o bin/application`. Request the system to execute with the command:
+```
+  $ /bin/bash -c bin/application
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/go-begin-training/mongodb-driver.first-step/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Documents:
+- https://www.mongodb.com/
+- https://docs.mongodb.com/drivers/go/
+- https://godoc.org/go.mongodb.org/mongo-driver/mongo
+- https://github.com/mongodb/mongo-go-driver
+- https://github.com/mongodb/mongo-go-driver#usage
 
-### Support or Contact
+---
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Copyright (c) [thinh-wee](https://github.com/thinh-wee)
